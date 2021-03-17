@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ContentView: View {
     
-        
     var body: some View {
         hamburgerMenuView()
 
@@ -64,65 +63,56 @@ struct MenuView: View {
 }
 
 
+struct Login: View {
+
+    @State var email: String = ""
+    @State var password: String = ""
+
+    var body: some View {
+        NavigationView {
+                VStack {
+                    Spacer()
+                    Text("Dont have a wallet yet?")
+                        .padding(.bottom, 15)
+                    Button(action: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/{}/*@END_MENU_TOKEN@*/) {
+                        Text("Sign Up")
+                            .font(.headline)
+                            .fontWeight(.bold)
+                    }
+                    .padding()
+                    .frame(width: 300, height: 50)
+                    .border(Color.gray, width: 1)
+                    .accentColor(.black)
+
+
+                    TextField("Email", text: $email)
+                        .padding(30)
+
+                    TextField("Password", text: $password)
+                        .padding(30)
+
+                    NavigationLink(destination: WalletView()) {
+                        Text("Login")
+                            .font(.headline)
+                            .foregroundColor(.white)
+                            .padding()
+                            .frame(width: 300, height: 50)
+                            .background(Color.blue)
+                            .cornerRadius(10.0)
+                    }
+                    Spacer()
+                    Spacer()
+
+                }
+                .lineLimit(/*@START_MENU_TOKEN@*/2/*@END_MENU_TOKEN@*/)
+                .navigationBarTitle("Login")
+
+        }
 
 
 
-
-
-
-
-
-
-//struct ContentView: View {
-//
-//    @State var email: String = ""
-//    @State var password: String = ""
-//
-//    var body: some View {
-//        NavigationView {
-//                VStack {
-//                    Spacer()
-//                    Text("Dont have a wallet yet?")
-//                        .padding(.bottom, 15)
-//                    Button(action: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/{}/*@END_MENU_TOKEN@*/) {
-//                        Text("Sign Up")
-//                            .font(.headline)
-//                            .fontWeight(.bold)
-//                    }
-//                    .padding()
-//                    .frame(width: 300, height: 50)
-//                    .border(Color.gray, width: 1)
-//                    .accentColor(.black)
-//
-//
-//                    TextField("Email", text: $email)
-//                        .padding(30)
-//
-//                    TextField("Password", text: $password)
-//                        .padding(30)
-//
-//                    NavigationLink(destination: WalletView()) {
-//                        Text("Login")
-//                            .font(.headline)
-//                            .foregroundColor(.white)
-//                            .padding()
-//                            .frame(width: 300, height: 50)
-//                            .background(Color.blue)
-//                            .cornerRadius(10.0)
-//                    }
-//                    Spacer()
-//                    Spacer()
-//
-//                }
-//                .lineLimit(/*@START_MENU_TOKEN@*/2/*@END_MENU_TOKEN@*/)
-//                .navigationBarTitle("Login")
-//
-//        }
-//
-//
-//
-//    }
-//}
+    }
+}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

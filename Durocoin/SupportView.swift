@@ -8,43 +8,58 @@
 import SwiftUI
 
 struct SupportView: View {
-    
+    @State private var isHowToFundMyWallet = false
+    @State private var isHowToBuyUSD = false
+    @State private var isHowDoesDurocoinWork = false
     
     var body: some View {
         NavigationView {
             ZStack{
-                Color.blue                  .edgesIgnoringSafeArea(.all)
+//                Color.blue                  .edgesIgnoringSafeArea(.all)
                 VStack{
-    //                Color.blue
-    //                    .ignoresSafeArea()
                     Spacer()
-                    NavigationLink(destination: PayOrRequestView()) {
-                        Text("Pay or Request")
-                            .font(.headline)
-                            .foregroundColor(.black)
-                            .padding()
-                            .frame(width: 220, height: 50)
-                            .background(Color.white)
-                            .cornerRadius(10.0)
-                    }
-                    NavigationLink(destination: PayOrRequestView()) {
-                        Text("Pay or Request")
-                            .font(.headline)
-                            .foregroundColor(.black)
-                            .padding()
-                            .frame(width: 220, height: 50)
-                            .background(Color.white)
-                            .cornerRadius(10.0)
-                    }
-                    NavigationLink(destination: PayOrRequestView()) {
-                        Text("Pay or Request")
-                            .font(.headline)
-                            .foregroundColor(.black)
-                            .padding()
-                            .frame(width: 220, height: 50)
-                            .background(Color.white)
-                            .cornerRadius(10.0)
-                    }
+                    Text("How to fund my wallet?")
+                        .font(.headline)
+                        .foregroundColor(.black)
+                        .padding()
+                        .frame(width: 300, height: 70)
+                        .background(Color.white)
+                        .cornerRadius(10.0)
+                        .sheet(isPresented: $isHowToFundMyWallet){
+                            HowToFundMyWallet(isHowToFundMyWallet: $isHowToFundMyWallet)
+                        }
+                        .onTapGesture {
+                            isHowToFundMyWallet.toggle()
+                        }
+                
+                    Text("How to buy USD?")
+                        .font(.headline)
+                        .foregroundColor(.black)
+                        .padding()
+                        .frame(width: 300, height: 70)
+                        .background(Color.white)
+                        .cornerRadius(10.0)
+                        .sheet(isPresented: $isHowToBuyUSD){
+                            HowToBuyUSD(isHowToBuyUSD: $isHowToBuyUSD)
+                        }
+                        .onTapGesture {
+                            isHowToBuyUSD.toggle()
+                        }
+         
+                    Text("How does Đurocoin work?")
+                        .font(.headline)
+                        .foregroundColor(.black)
+                        .padding()
+                        .frame(width: 300, height: 70)
+                        .background(Color.white)
+                        .cornerRadius(10.0)
+                        .sheet(isPresented: $isHowDoesDurocoinWork){
+                            HowDoesDurocoinWork(isHowDoesDurocoinWork: $isHowDoesDurocoinWork)
+                        }
+                        .onTapGesture {
+                            isHowDoesDurocoinWork.toggle()
+                        }
+                   
                     Spacer()
                     Spacer()
                     NavigationLink(destination: SupportChatView()) {
@@ -52,7 +67,7 @@ struct SupportView: View {
                             .font(.headline)
                             .foregroundColor(.black)
                             .padding()
-                            .frame(width: 220, height: 50)
+                            .frame(width: 300, height: 70)
                             .background(Color.white)
                             .cornerRadius(10.0)
                     }
@@ -60,11 +75,46 @@ struct SupportView: View {
                 }
                 
             }
-            .navigationBarTitle("Support")
-            .background(Color.blue.edgesIgnoringSafeArea(.all))
+
+//            .background(Color.blue.edgesIgnoringSafeArea(.all))
         }
+        .navigationBarTitle("Support")
     }
 }
+
+struct HowToFundMyWallet: View {
+    @Binding var isHowToFundMyWallet: Bool
+    
+    var body: some View {
+        Text("HowToFundMyWallet")
+            .onTapGesture {
+                isHowToFundMyWallet.toggle()
+            }
+    }
+}
+
+struct HowToBuyUSD: View {
+    @Binding var isHowToBuyUSD: Bool
+    
+    var body: some View {
+        Text("HowToBuyUSD")
+            .onTapGesture {
+                isHowToBuyUSD.toggle()
+            }
+    }
+}
+
+struct HowDoesDurocoinWork: View {
+    @Binding var isHowDoesDurocoinWork: Bool
+    
+    var body: some View {
+        Text("HowDoesDurocoinWork")
+            .onTapGesture {
+                isHowDoesDurocoinWork.toggle()
+            }
+    }
+}
+
 
 struct SupportView_Previews: PreviewProvider {
     static var previews: some View {

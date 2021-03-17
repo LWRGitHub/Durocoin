@@ -24,7 +24,7 @@ struct hamburgerMenuView: View {
         
         return NavigationView {
             GeometryReader { geometry in
-                ZStack(alignment: .leading) {
+                ZStack(alignment: .trailing) {
                     MainView(showHamburgerMenu: self.$showHamburgerMenu)
                         .frame(width: geometry.size.width, height: geometry.size.height)
                         .offset(x: self.showHamburgerMenu ? geometry.size.width/2 : 0)
@@ -33,7 +33,7 @@ struct hamburgerMenuView: View {
                     if self.showHamburgerMenu {
                         MenuView()
                             .frame(width: geometry.size.width/2)
-                            .transition(.move(edge: .leading))
+                            .transition(.move(edge: .trailing))
                     }
                 }
                 .gesture(drag)
@@ -48,12 +48,23 @@ struct hamburgerMenuView: View {
                 }) {
                     Image(systemName: "line.horizontal.3")
                         .imageScale(.large)
-                }
+                }.foregroundColor(.gray)
             ))
         }
-        
     }
 }
+
+
+struct MainView: View {
+    @Binding var showHamburgerMenu: Bool
+    @State private var isInvite = false
+    @State private var isPayOrRequest = false
+    
+    var body: some View {
+        WalletView()
+    }
+}
+
 
 struct hamburgerMenuView_Previews: PreviewProvider {
     static var previews: some View {
