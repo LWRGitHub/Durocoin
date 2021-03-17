@@ -14,13 +14,15 @@ struct SupportChatView: View {
                 Color.blue
                     .edgesIgnoringSafeArea(.all)
                 VStack{
+                    Rectangle()
+                        .fill(Color.white)
+                        .frame(width: 400, height: 650)
+                        .cornerRadius(10.0)
                     ZStack{
-                        Path { path in
-                            path.move(to: CGPoint( x:20, y:0 ))
-                            path.addLine(to: CGPoint( x:20, y:300))
-                            path.addLine(to: CGPoint(x: 300, y: 300))
-                            path.addLine(to: CGPoint(x: 300, y:0))
-                        }
+                        Rectangle()
+                            .fill(Color.white)
+                            .frame(width: 400, height: 50)
+                            .cornerRadius(10.0)
                         Text("Write message...")     .frame(width: 220, height: 30)
                             .background(Color(red: 0.74, green: 0.9, blue: 1.0))
                     }

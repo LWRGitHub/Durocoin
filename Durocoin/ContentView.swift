@@ -8,11 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var isNotLoggedIn: Bool = true
     
     var body: some View {
         hamburgerMenuView()
-
+            .sheet(isPresented: $isNotLoggedIn) {
+                LoginView()
+            }
     }
+    
+    
 }
 
 struct MenuView: View {
@@ -63,7 +68,7 @@ struct MenuView: View {
 }
 
 
-struct Login: View {
+struct LoginView: View {
 
     @State var email: String = ""
     @State var password: String = ""
