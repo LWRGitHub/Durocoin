@@ -11,6 +11,14 @@
 		8D1F4B2526000A270023E7AC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1F4B2426000A270023E7AC /* ContentView.swift */; };
 		8D1F4B2726000A2B0023E7AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D1F4B2626000A2B0023E7AC /* Assets.xcassets */; };
 		8D1F4B2A26000A2B0023E7AC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D1F4B2926000A2B0023E7AC /* Preview Assets.xcassets */; };
+		8D1F4B332600273B0023E7AC /* WalletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1F4B322600273A0023E7AC /* WalletView.swift */; };
+		8D1F4B3D260114D00023E7AC /* SupportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1F4B3C260114D00023E7AC /* SupportView.swift */; };
+		8D1F4B40260119BD0023E7AC /* PayOrRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1F4B3F260119BD0023E7AC /* PayOrRequestView.swift */; };
+		8D1F4B4326011A470023E7AC /* InviteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1F4B4226011A470023E7AC /* InviteView.swift */; };
+		8D1F4B46260122090023E7AC /* SupportChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1F4B45260122090023E7AC /* SupportChatView.swift */; };
+		8D1F4B49260124040023E7AC /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1F4B48260124040023E7AC /* SettingsView.swift */; };
+		8D1F4B4C26015BBD0023E7AC /* MainContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1F4B4B26015BBD0023E7AC /* MainContentView.swift */; };
+		8D1F4B4F26017E6B0023E7AC /* hamburgerMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1F4B4E26017E6B0023E7AC /* hamburgerMenuView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +28,14 @@
 		8D1F4B2626000A2B0023E7AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D1F4B2926000A2B0023E7AC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8D1F4B2B26000A2B0023E7AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D1F4B322600273A0023E7AC /* WalletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletView.swift; sourceTree = "<group>"; };
+		8D1F4B3C260114D00023E7AC /* SupportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportView.swift; sourceTree = "<group>"; };
+		8D1F4B3F260119BD0023E7AC /* PayOrRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayOrRequestView.swift; sourceTree = "<group>"; };
+		8D1F4B4226011A470023E7AC /* InviteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteView.swift; sourceTree = "<group>"; };
+		8D1F4B45260122090023E7AC /* SupportChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportChatView.swift; sourceTree = "<group>"; };
+		8D1F4B48260124040023E7AC /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		8D1F4B4B26015BBD0023E7AC /* MainContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContentView.swift; sourceTree = "<group>"; };
+		8D1F4B4E26017E6B0023E7AC /* hamburgerMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hamburgerMenuView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +70,14 @@
 			children = (
 				8D1F4B2226000A270023E7AC /* DurocoinApp.swift */,
 				8D1F4B2426000A270023E7AC /* ContentView.swift */,
+				8D1F4B4E26017E6B0023E7AC /* hamburgerMenuView.swift */,
+				8D1F4B4B26015BBD0023E7AC /* MainContentView.swift */,
+				8D1F4B3C260114D00023E7AC /* SupportView.swift */,
+				8D1F4B48260124040023E7AC /* SettingsView.swift */,
+				8D1F4B45260122090023E7AC /* SupportChatView.swift */,
+				8D1F4B322600273A0023E7AC /* WalletView.swift */,
+				8D1F4B4226011A470023E7AC /* InviteView.swift */,
+				8D1F4B3F260119BD0023E7AC /* PayOrRequestView.swift */,
 				8D1F4B2626000A2B0023E7AC /* Assets.xcassets */,
 				8D1F4B2B26000A2B0023E7AC /* Info.plist */,
 				8D1F4B2826000A2B0023E7AC /* Preview Content */,
@@ -138,8 +162,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D1F4B3D260114D00023E7AC /* SupportView.swift in Sources */,
+				8D1F4B49260124040023E7AC /* SettingsView.swift in Sources */,
+				8D1F4B4326011A470023E7AC /* InviteView.swift in Sources */,
+				8D1F4B46260122090023E7AC /* SupportChatView.swift in Sources */,
 				8D1F4B2526000A270023E7AC /* ContentView.swift in Sources */,
+				8D1F4B4C26015BBD0023E7AC /* MainContentView.swift in Sources */,
 				8D1F4B2326000A270023E7AC /* DurocoinApp.swift in Sources */,
+				8D1F4B40260119BD0023E7AC /* PayOrRequestView.swift in Sources */,
+				8D1F4B332600273B0023E7AC /* WalletView.swift in Sources */,
+				8D1F4B4F26017E6B0023E7AC /* hamburgerMenuView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
