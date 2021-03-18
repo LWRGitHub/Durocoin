@@ -15,7 +15,13 @@ struct SupportView: View {
     var body: some View {
         NavigationView {
             ZStack{
-//                Color.blue                  .edgesIgnoringSafeArea(.all)
+                Rectangle()
+                    .fill(
+                        LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 0.09437356223, green: 0.775731039, blue: 1, alpha: 1)), .blue]), startPoint: .topLeading, endPoint: .bottomTrailing)
+                        )
+
+                    .frame(width: 500, height: 900)
+                    .edgesIgnoringSafeArea(.all)
                 VStack{
                     Spacer()
                     Text("How to fund my wallet?")
@@ -76,7 +82,7 @@ struct SupportView: View {
                 
             }
 
-//            .background(Color.blue.edgesIgnoringSafeArea(.all))
+            .background(Color.blue.edgesIgnoringSafeArea(.all))
         }
         .navigationBarTitle("Support")
     }
@@ -86,10 +92,15 @@ struct HowToFundMyWallet: View {
     @Binding var isHowToFundMyWallet: Bool
     
     var body: some View {
-        Text("HowToFundMyWallet")
+        Rectangle()
+            .fill(Color.black)
+            .frame(width: 100, height: 5)
+            .cornerRadius(2.0)
+            .padding(.top, 6.0)
             .onTapGesture {
                 isHowToFundMyWallet.toggle()
             }
+        Spacer()
     }
 }
 
@@ -97,10 +108,15 @@ struct HowToBuyUSD: View {
     @Binding var isHowToBuyUSD: Bool
     
     var body: some View {
-        Text("HowToBuyUSD")
+        Rectangle()
+            .fill(Color.black)
+            .frame(width: 100, height: 5)
+            .cornerRadius(2.0)
+            .padding(.top, 6.0)
             .onTapGesture {
                 isHowToBuyUSD.toggle()
             }
+        Spacer()
     }
 }
 
@@ -108,10 +124,15 @@ struct HowDoesDurocoinWork: View {
     @Binding var isHowDoesDurocoinWork: Bool
     
     var body: some View {
-        Text("HowDoesDurocoinWork")
+        Rectangle()
+            .fill(Color.black)
+            .frame(width: 100, height: 5)
+            .cornerRadius(2.0)
+            .padding(.top, 6.0)
             .onTapGesture {
                 isHowDoesDurocoinWork.toggle()
             }
+        Spacer()
     }
 }
 
