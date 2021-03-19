@@ -33,8 +33,10 @@ struct SupportChatView: View {
                             .frame(width: 400, height: 50)
                             .cornerRadius(10.0)
                         Text("Write message...")
+                            .foregroundColor(.gray)
+                            .padding(.trailing, 85.0)
                             .frame(width: 220, height: 30)
-                            .background(Color(red: 0.8, green: 0.9, blue: 1.0))
+                            .background(Color(#colorLiteral(red: 0.74147683, green: 1, blue: 0.9909284674, alpha: 0.5519049658)))
                         HStack(spacing: 280){
                             Image(systemName:"square.and.arrow.up")
                                 .font(.system(size: 28.0))

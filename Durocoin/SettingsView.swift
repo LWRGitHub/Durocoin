@@ -26,6 +26,7 @@ struct SettingsView: View {
                 VStack{
                     Spacer()
                     Text("Wallet")
+                        .fontWeight(.medium)
                         .padding()
                         .foregroundColor(.white)
                         .sheet(isPresented: $isWallet){
@@ -35,6 +36,7 @@ struct SettingsView: View {
                             isWallet.toggle()
                         }
                     Text("Personal Information")
+                        .fontWeight(.medium)
                         .padding()
                         .foregroundColor(.white)
                         .sheet(isPresented: $isPersonalInfo){
@@ -43,7 +45,7 @@ struct SettingsView: View {
                         .onTapGesture {
                             isPersonalInfo.toggle()
                         }
-                    Text("Language")
+                    Text("Language")                  .fontWeight(.medium)
                         .padding()
                         .foregroundColor(.white)
                         .sheet(isPresented: $isLanguage){
@@ -66,6 +68,7 @@ struct PersonalInfo: View {
     
     @State var name: String = "Some Name"
     @State var email: String = "SomeEmail@email.com"
+    @State var phone: String = "(555) 555-5555"
     @State var street: String = "555 SomeThing St."
     @State var city: String = "San Francisco"
     @State var state: String = "CA"
@@ -100,6 +103,10 @@ struct PersonalInfo: View {
                 }
                 Section(header: Text("Email")) {
                     TextField(email, text: $email)
+                    
+                }
+                Section(header: Text("Phone")) {
+                    TextField(phone, text: $phone)
                     
                 }
                 Toggle(isOn: $sameAdress) {

@@ -39,7 +39,6 @@ struct hamburgerMenuView: View {
                 .gesture(drag)
                 
             }
-            .navigationBarTitle("Wallet")
             .navigationBarItems(trailing: (
                 Button(action: {
                     withAnimation {
@@ -48,7 +47,7 @@ struct hamburgerMenuView: View {
                 }) {
                     Image(systemName: "line.horizontal.3")
                         .imageScale(.large)
-                }.foregroundColor(.gray)
+                }.foregroundColor(.white)
             ))
         }
     }

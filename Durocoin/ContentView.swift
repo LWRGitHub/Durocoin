@@ -75,7 +75,9 @@ struct LoginView: View {
 //    @Binding var isNotLoggedIn: Bool
 
     var body: some View {
+        
         NavigationView {
+            
                 VStack {
 //                    Rectangle()
 //                        .fill(Color.black)
@@ -122,13 +124,10 @@ struct LoginView: View {
                 }
                 .lineLimit(/*@START_MENU_TOKEN@*/2/*@END_MENU_TOKEN@*/)
                 .navigationBarTitle("Login")
-
         }
-
-
-
     }
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
