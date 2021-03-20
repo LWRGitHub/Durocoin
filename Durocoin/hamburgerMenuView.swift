@@ -9,6 +9,7 @@ import SwiftUI
 
 struct hamburgerMenuView: View {
     @State var showHamburgerMenu = false
+    @State var show = false
     
     var body: some View {
         
@@ -44,6 +45,7 @@ struct hamburgerMenuView: View {
                     withAnimation {
                         self.showHamburgerMenu.toggle()
                     }
+//                    self.show.toggle()
                 }) {
                     Image(systemName: "line.horizontal.3")
                         .imageScale(.large)

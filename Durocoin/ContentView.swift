@@ -16,8 +16,6 @@ struct ContentView: View {
                 LoginView()
             }
     }
-    
-    
 }
 
 struct MenuView: View {
