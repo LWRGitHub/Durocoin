@@ -16,54 +16,15 @@ struct ContentView: View {
                 LoginView()
             }
     }
+    
+    init() {
+        let navBarAppearance = UINavigationBar.appearance()
+        navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+    }
 }
 
-struct MenuView: View {
-    
-    var body: some View {
-        VStack(alignment: .leading) {
-            HStack {
-                Image(systemName: "creditcard")
-                    .foregroundColor(.gray)
-                    .imageScale(.large)
-                NavigationLink(destination: WalletView()) {
-                    Text("Wallet")
-                        .foregroundColor(.gray)
-                        .font(.headline)
-                }
-            }
-            .padding(.top, 100)
-            HStack {
-                Image(systemName: "person.fill.questionmark")
-                    .foregroundColor(.gray)
-                    .imageScale(.large)
-                NavigationLink(destination: SupportView()) {
-                    Text("Support")
-                        .foregroundColor(.gray)
-                        .font(.headline)
-                }
-            }
-            .padding(.top, 30)
-            HStack {
-                Image(systemName: "gear")
-                    .foregroundColor(.gray)
-                    .imageScale(.large)
-                NavigationLink(destination: SettingsView()) {
-                    Text("Settings")
-                        .foregroundColor(.gray)
-                        .font(.headline)
-                }
-            }
-            .padding(.top, 30)
-            Spacer()
-        }
-        .padding()
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .background(Color(red: 32/255, green: 32/255, blue: 32/255))
-        .edgesIgnoringSafeArea(.all)
-    }
-    
-}
+
 
 
 struct LoginView: View {

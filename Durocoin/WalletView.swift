@@ -10,7 +10,7 @@ import SwiftUI
 struct WalletView: View {
     @State private var isInvite = false
     @State private var isPayOrRequest = false
-    
+    @State var duroBalance: Double = 2350.03
     
     var body: some View {
         NavigationView {
@@ -24,36 +24,43 @@ struct WalletView: View {
                     .edgesIgnoringSafeArea(.all)
             
                 VStack{
-                    Text("Đ 2,350.03")
-                        .font(.largeTitle)
-                        .frame(width: 325, height: 150)
-                        .background(Color.white)
-                        .cornerRadius(10.0)
-                    Text("Recent Activity")
-                        .fontWeight(.bold)
-                        .padding(.top, 10.0)
-                        .frame(width: 325, height: 20, alignment: .topLeading)
-                        .foregroundColor(.white)
-                    
                     ZStack{
-                        Rectangle()
-                            .fill(Color(red: 0.9, green: 0.9, blue: 0.9, opacity: 1.0))
-                            .frame(width: 500, height: 400)
-                        VStack{
+                        ZStack(alignment: .bottomTrailing) {
                             Rectangle()
-                                .fill(Color.white)
-                                .frame(width: 500, height: 99)
-                            Rectangle()
-                                .fill(Color.white)
-                                .frame(width: 500, height: 99)
-                            Rectangle()
-                                .fill(Color.white)
-                                .frame(width: 500, height: 99)
-                            Rectangle()
-                                .fill(Color.white)
-                                .frame(width: 500, height: 99)
+                                .frame(width: 325, height: 150)
+                                .foregroundColor(.white)
+                                .cornerRadius(10.0)
+                            Text("USD \(String(duroBalance*1.2))")
+                                .font(.body)
+                                .fontWeight(.regular)
+                                .padding()
                         }
+                        Text("Đ \(String(duroBalance))")
+                            .font(.largeTitle)
                     }
+                    .padding(.bottom, 20.0)
+                    
+//                    ScrollView (.horizontal, showsIndicators: false) {
+                        ZStack{
+                            Rectangle()
+                                .fill(Color(red: 0.9, green: 0.9, blue: 0.9, opacity: 1.0))
+                                .frame(width: 500, height: 400)
+                            VStack{
+                                Rectangle()
+                                    .fill(Color.white)
+                                    .frame(width: 500, height: 99)
+                                Rectangle()
+                                    .fill(Color.white)
+                                    .frame(width: 500, height: 99)
+                                Rectangle()
+                                    .fill(Color.white)
+                                    .frame(width: 500, height: 99)
+                                Rectangle()
+                                    .fill(Color.white)
+                                    .frame(width: 500, height: 99)
+                            }
+                        }
+//                    }
                     
                     HStack(spacing: 20){
                         
@@ -61,8 +68,12 @@ struct WalletView: View {
                             .font(.headline)
                             .padding()
                             .frame(width: 120, height: 50)
-                            .cornerRadius(10.0)
-                            .border(Color.gray, width: 1)
+                            .background(Color.white)
+                            
+                            .overlay(
+                                        Capsule(style: .continuous)
+                                            .stroke(Color.gray, style: StrokeStyle(lineWidth: 1))
+                                    )
                             .accentColor(.black)
                             .sheet(isPresented: $isInvite){
                                 Invite(isInvite: $isInvite)
@@ -70,9 +81,6 @@ struct WalletView: View {
                             .onTapGesture {
                                 isInvite.toggle()
                             }
-                        
-                        
-                    
                         Text("Pay or Request")
                             .font(.headline)
                             .foregroundColor(.white)
@@ -81,7 +89,7 @@ struct WalletView: View {
                             .background(
                                 LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 0.09437356223, green: 0.775731039, blue: 1, alpha: 1)), .blue]), startPoint: .topLeading, endPoint: .bottomTrailing)
                                 )
-                            .cornerRadius(10.0)
+                            .cornerRadius(21.0)
                             .sheet(isPresented: $isPayOrRequest){
                                 PayOrRequest(isPayOrRequest: $isPayOrRequest)
                             }
