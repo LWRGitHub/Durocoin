@@ -11,6 +11,7 @@ struct WalletView: View {
     @State private var isInvite = false
     @State private var isPayOrRequest = false
     @State var duroBalance: Double = 2350.03
+    @State var showHamburgerMenu: Bool = false
     
     var body: some View {
         NavigationView {
@@ -22,6 +23,8 @@ struct WalletView: View {
 
                     .frame(width: 500, height: 900)
                     .edgesIgnoringSafeArea(.all)
+                
+                
             
                 VStack{
                     ZStack{
@@ -34,6 +37,7 @@ struct WalletView: View {
                                 .font(.body)
                                 .fontWeight(.regular)
                                 .padding()
+                                .foregroundColor(.gray)
                         }
                         Text("Đ \(String(duroBalance))")
                             .font(.largeTitle)
@@ -46,18 +50,122 @@ struct WalletView: View {
                                 .fill(Color(red: 0.9, green: 0.9, blue: 0.9, opacity: 1.0))
                                 .frame(width: 500, height: 400)
                             VStack{
-                                Rectangle()
-                                    .fill(Color.white)
-                                    .frame(width: 500, height: 99)
-                                Rectangle()
-                                    .fill(Color.white)
-                                    .frame(width: 500, height: 99)
-                                Rectangle()
-                                    .fill(Color.white)
-                                    .frame(width: 500, height: 99)
-                                Rectangle()
-                                    .fill(Color.white)
-                                    .frame(width: 500, height: 99)
+                                ZStack{
+                                    Rectangle()
+                                        .fill(Color.white)
+                                        .frame(width: 500, height: 99)
+                                    VStack{
+                                        HStack(spacing: 270){
+                                            ZStack{
+                                                VStack{
+                                                    Text("Lyft")
+                                                }
+                                            }
+                                            ZStack{
+                                                VStack{
+                                                    Text("Đ 10.85")
+                                                    Text("USD $12.99")
+                                                        .foregroundColor(.gray)
+                                                        .font(.system(size: 10))
+                                                }
+                                            }
+                                        }
+                                        HStack{
+                                            Text("6:00 pm Monday, March 15 2021")
+                                                .padding(.trailing, 130.0)
+                                                .font(.system(size: 15))
+                                                .foregroundColor(.gray)
+                                        }
+                                    }
+                                        
+                                }
+                                ZStack{
+                                    Rectangle()
+                                        .fill(Color.white)
+                                        .frame(width: 500, height: 99)
+                                    VStack{
+                                        HStack(spacing: 270){
+                                            ZStack{
+                                                VStack{
+                                                    Text("Lyft")
+                                                }
+                                            }
+                                            ZStack{
+                                                VStack{
+                                                    Text("Đ 10.85")
+                                                    Text("USD $12.99")
+                                                        .foregroundColor(.gray)
+                                                        .font(.system(size: 10))
+                                                }
+                                            }
+                                        }
+                                        HStack{
+                                            Text("6:00 pm Monday, March 15 2021")
+                                                .padding(.trailing, 130.0)
+                                                .font(.system(size: 15))
+                                                .foregroundColor(.gray)
+                                        }
+                                    }
+                                        
+                                }
+                                ZStack{
+                                    Rectangle()
+                                        .fill(Color.white)
+                                        .frame(width: 500, height: 99)
+                                    VStack{
+                                        HStack(spacing: 270){
+                                            ZStack{
+                                                VStack{
+                                                    Text("Lyft")
+                                                }
+                                            }
+                                            ZStack{
+                                                VStack{
+                                                    Text("Đ 10.85")
+                                                    Text("USD $12.99")
+                                                        .foregroundColor(.gray)
+                                                        .font(.system(size: 10))
+                                                }
+                                            }
+                                        }
+                                        HStack{
+                                            Text("6:00 pm Monday, March 15 2021")
+                                                .padding(.trailing, 130.0)
+                                                .font(.system(size: 15))
+                                                .foregroundColor(.gray)
+                                        }
+                                    }
+                                        
+                                }
+                                ZStack{
+                                    Rectangle()
+                                        .fill(Color.white)
+                                        .frame(width: 500, height: 99)
+                                    VStack{
+                                        HStack(spacing: 270){
+                                            ZStack{
+                                                VStack{
+                                                    Text("Lyft")
+                                                }
+                                            }
+                                            ZStack{
+                                                VStack{
+                                                    Text("Đ 10.85")
+                                                    Text("USD $12.99")
+                                                        .foregroundColor(.gray)
+                                                        .font(.system(size: 10))
+                                                }
+                                            }
+                                        }
+                                        HStack{
+                                            Text("6:00 pm Monday, March 15 2021")
+                                                .padding(.trailing, 130.0)
+                                                .font(.system(size: 15))
+                                                .foregroundColor(.gray)
+                                        }
+                                    }
+                                        
+                                }
                             }
                         }
 //                    }
@@ -104,8 +212,7 @@ struct WalletView: View {
                     .background(Color.white.edgesIgnoringSafeArea(.all))
                 }
             }
-        }
-        .navigationBarTitle("Wallet")
+        }.navigationBarTitle("Wallet")
     }
 }
 
