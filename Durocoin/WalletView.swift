@@ -12,6 +12,7 @@ struct WalletView: View {
     @State private var isPayOrRequest = false
     @State var duroBalance: Double = 2350.03
     @State var showHamburgerMenu: Bool = false
+    @State private var showingAlert = false
     
     var body: some View {
         NavigationView {
@@ -26,7 +27,8 @@ struct WalletView: View {
                 
                 
             
-                VStack{
+                VStack(spacing: 0){
+                    
                     ZStack{
                         ZStack(alignment: .bottomTrailing) {
                             Rectangle()
@@ -44,16 +46,16 @@ struct WalletView: View {
                     }
                     .padding(.bottom, 20.0)
                     
-//                    ScrollView (.horizontal, showsIndicators: false) {
                         ZStack{
-                            Rectangle()
-                                .fill(Color(red: 0.9, green: 0.9, blue: 0.9, opacity: 1.0))
-                                .frame(width: 500, height: 400)
-                            VStack{
+//                            Rectangle()
+//                                .fill(Color(red: 0.9, green: 0.9, blue: 0.9, opacity: 1.0))
+//                                .frame(width: 500, height: 400)
+                            VStack(spacing: 0){
                                 ZStack{
                                     Rectangle()
                                         .fill(Color.white)
                                         .frame(width: 500, height: 99)
+                                        .padding(0)
                                     VStack{
                                         HStack(spacing: 270){
                                             ZStack{
@@ -64,6 +66,7 @@ struct WalletView: View {
                                             ZStack{
                                                 VStack{
                                                     Text("Đ 10.85")
+                                                        .foregroundColor(.red)
                                                     Text("USD $12.99")
                                                         .foregroundColor(.gray)
                                                         .font(.system(size: 10))
@@ -79,20 +82,24 @@ struct WalletView: View {
                                     }
                                         
                                 }
+                                Rectangle()
+                                    .fill(Color.gray)
+                                    .frame(width: 500, height: 1)
                                 ZStack{
                                     Rectangle()
                                         .fill(Color.white)
                                         .frame(width: 500, height: 99)
                                     VStack{
-                                        HStack(spacing: 270){
+                                        HStack(spacing: 210){
                                             ZStack{
                                                 VStack{
-                                                    Text("Lyft")
+                                                    Text("Chase Bank")
                                                 }
                                             }
                                             ZStack{
                                                 VStack{
                                                     Text("Đ 10.85")
+                                                        .foregroundColor(.green)
                                                     Text("USD $12.99")
                                                         .foregroundColor(.gray)
                                                         .font(.system(size: 10))
@@ -108,20 +115,24 @@ struct WalletView: View {
                                     }
                                         
                                 }
+                                Rectangle()
+                                    .fill(Color.gray)
+                                    .frame(width: 500, height: 1)
                                 ZStack{
                                     Rectangle()
                                         .fill(Color.white)
                                         .frame(width: 500, height: 99)
                                     VStack{
-                                        HStack(spacing: 270){
+                                        HStack(spacing: 200){
                                             ZStack{
                                                 VStack{
-                                                    Text("Lyft")
+                                                    Text("Whole Foods")
                                                 }
                                             }
                                             ZStack{
                                                 VStack{
                                                     Text("Đ 10.85")
+                                                        .foregroundColor(.red)
                                                     Text("USD $12.99")
                                                         .foregroundColor(.gray)
                                                         .font(.system(size: 10))
@@ -137,21 +148,25 @@ struct WalletView: View {
                                     }
                                         
                                 }
+                                Rectangle()
+                                    .fill(Color.gray)
+                                    .frame(width: 500, height: 1)
                                 ZStack{
                                     Rectangle()
                                         .fill(Color.white)
                                         .frame(width: 500, height: 99)
                                     VStack{
-                                        HStack(spacing: 270){
+                                        HStack(spacing: 176){
                                             ZStack{
                                                 VStack{
-                                                    Text("Lyft")
+                                                    Text("Bitcoin Wallet")
                                                 }
                                             }
                                             ZStack{
                                                 VStack{
-                                                    Text("Đ 10.85")
-                                                    Text("USD $12.99")
+                                                    Text("Đ 1005.85")
+                                                        .foregroundColor(.green)
+                                                    Text("USD $1248.99")
                                                         .foregroundColor(.gray)
                                                         .font(.system(size: 10))
                                                 }
@@ -163,9 +178,11 @@ struct WalletView: View {
                                                 .font(.system(size: 15))
                                                 .foregroundColor(.gray)
                                         }
-                                    }
-                                        
+                                    }    
                                 }
+                                Rectangle()
+                                    .fill(Color.gray)
+                                    .frame(width: 500, height: 1)
                             }
                         }
 //                    }

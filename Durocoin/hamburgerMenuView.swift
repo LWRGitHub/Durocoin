@@ -59,20 +59,27 @@ struct hamburgerMenuView: View {
 
 
 struct MenuView: View {
+    @State private var ShowLogout = false
+    @State private var showingAlert = false
     
     var body: some View {
         GeometryReader { geometry in
             HStack{
                 VStack(alignment: .leading) {
-                    HStack(spacing: 25){
+                    HStack(spacing: 35){
                         Text("Hi, UserName")
                             .font(.largeTitle)
                             .padding(.bottom, 10.0)
                             .padding(.leading, 15.0)
-                        Text("Logout")
-                            .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                            .padding(.top, 50.0)
+                        
+                        Button("Logout") {
+                            showingAlert.toggle()
+                        }
+                        .alert(isPresented: $showingAlert) {
+                            Alert(title: Text("Logout"), message: Text("Are you sure, you want to logout?"), primaryButton: .default(Text("No")), secondaryButton: .default(Text("Yes")))
+                        }
                     }
-                    .padding(.top, 50.0)
                     Rectangle()
                         .fill(Color.gray)
                         .frame(width: geometry.size.width, height: 1)
@@ -132,6 +139,17 @@ struct MenuView: View {
                 
             }
         }
+    }
+}
+
+struct LogoutView: View {
+    @Binding var ShowLogout: Bool
+    
+    var body: some View {
+        Rectangle()
+            .fill(Color.red)
+            .frame(width: 300, height: 350)
+            .cornerRadius(10.0)
     }
 }
 

@@ -11,10 +11,12 @@ struct ContentView: View {
     @State var isNotLoggedIn: Bool = true
     
     var body: some View {
-        hamburgerMenuView()
-            .sheet(isPresented: $isNotLoggedIn) {
-                LoginView()
-            }
+        ZStack{
+            hamburgerMenuView()
+                .sheet(isPresented: $isNotLoggedIn) {
+                    LoginView()
+                }
+        }
     }
     
     init() {
@@ -32,20 +34,17 @@ struct LoginView: View {
     @State var email: String = ""
     @State var password: String = ""
 //    @Binding var isNotLoggedIn: Bool
+//    @State var ShowLogout: Bool
 
     var body: some View {
         
         NavigationView {
             
                 VStack {
-//                    Rectangle()
-//                        .fill(Color.black)
-//                        .frame(width: 100, height: 5)
-//                        .cornerRadius(2.0)
-//                        .padding(.top, 6.0)
-//                        .onTapGesture {
-//                            isNotLoggedIn.toggle()
-//                        }
+                    Text("Login")
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        
                     Spacer()
                     Text("Dont have a wallet yet?")
                         .padding(.bottom, 15)
@@ -82,13 +81,13 @@ struct LoginView: View {
 
                 }
                 .lineLimit(/*@START_MENU_TOKEN@*/2/*@END_MENU_TOKEN@*/)
-                .navigationBarTitle("Login")
         }
     }
 }
 
 
 struct ContentView_Previews: PreviewProvider {
+//    @Binding var ShowLogout: Bool
     static var previews: some View {
         ContentView()
     }
