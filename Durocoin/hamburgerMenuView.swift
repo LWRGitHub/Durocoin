@@ -46,12 +46,18 @@ struct hamburgerMenuView: View {
                         self.showHamburgerMenu.toggle()
                     }
                 }) {
-//                    if !showHamburgerMenu{
+                    
+                    if !showHamburgerMenu{
                         Image(systemName: "line.horizontal.3")
                             .imageScale(.large)
-//                    }
+                            .foregroundColor(.white)
+                    }else{
+                        Image(systemName: "line.horizontal.3")
+                            .imageScale(.large)
+                            .foregroundColor(.black)
+                    }
                 }
-                .foregroundColor(.white)
+//                .foregroundColor(.white)
             ))
         }
     }
@@ -79,6 +85,7 @@ struct MenuView: View {
                         .alert(isPresented: $showingAlert) {
                             Alert(title: Text("Logout"), message: Text("Are you sure, you want to logout?"), primaryButton: .default(Text("No")), secondaryButton: .default(Text("Yes")))
                         }
+                        .padding(.bottom, 25.0)
                     }
                     Rectangle()
                         .fill(Color.gray)
