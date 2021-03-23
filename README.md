@@ -15,14 +15,22 @@ An inflation resistant currency backed by inflation resistant assets such as the
 
 ## Img
 
+
 ***Wallet View***
+
 <img alt="Screen shot of wallet view"  src="https://raw.githubusercontent.com/lwrgithub/Durocoin/master/img/wallet.png" />
 
+
 ***Settings View***
+
 <img alt="Screen shot of settings view"  src="https://raw.githubusercontent.com/lwrgithub/Durocoin/master/img/settings.png" />
 
+
 ***Support View***
+
 <img alt="Screen shot of settings view."  src="https://raw.githubusercontent.com/lwrgithub/Durocoin/master/img/support.png" />
 
+
 ***menu***
+
 <img alt="Screen shot of menu."  src="https://raw.githubusercontent.com/lwrgithub/Durocoin/master/img/menu.png" />
