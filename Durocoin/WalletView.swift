@@ -332,7 +332,7 @@ struct PayOrRequest: View {
                             Text("Pay with QR Code")
                         }
                         if payUsingQR{
-                            Image("Durocoin")
+                            Image("Đurocoin")
                                 .resizable()
                                 .frame(width: 300.0, height: 300.0)
                                 .padding()

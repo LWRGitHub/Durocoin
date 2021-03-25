@@ -15,7 +15,7 @@ struct ContentView: View {
             hamburgerMenuView()
                 .sheet(isPresented: $isNotLoggedIn) {
                     LoginView()
-                }
+            }
         }
     }
     
