@@ -16,6 +16,21 @@
 		8D1F4B46260122090023E7AC /* SupportChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1F4B45260122090023E7AC /* SupportChatView.swift */; };
 		8D1F4B49260124040023E7AC /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1F4B48260124040023E7AC /* SettingsView.swift */; };
 		8D1F4B4F26017E6B0023E7AC /* hamburgerMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1F4B4E26017E6B0023E7AC /* hamburgerMenuView.swift */; };
+		8D524768261023C9007F59C6 /* Invite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D524767261023C9007F59C6 /* Invite.swift */; };
+		8D52476B26102E27007F59C6 /* PayOrRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D52476A26102E27007F59C6 /* PayOrRequest.swift */; };
+		8D52476F26102EB0007F59C6 /* HowToFundMyWallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D52476E26102EB0007F59C6 /* HowToFundMyWallet.swift */; };
+		8D52477326102EDE007F59C6 /* HowToBuyUSD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D52477226102EDE007F59C6 /* HowToBuyUSD.swift */; };
+		8D52477626102F31007F59C6 /* HowDoesDurocoinWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D52477526102F31007F59C6 /* HowDoesDurocoinWork.swift */; };
+		8D52477926102FAC007F59C6 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D52477826102FAC007F59C6 /* LoginView.swift */; };
+		8D52477E2610399F007F59C6 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D52477D2610399F007F59C6 /* MenuView.swift */; };
+		8D524783261039D6007F59C6 /* LogoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D524782261039D6007F59C6 /* LogoutView.swift */; };
+		8D52478626103A07007F59C6 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D52478526103A07007F59C6 /* MainView.swift */; };
+		8D52478926103A4C007F59C6 /* BuySell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D52478826103A4C007F59C6 /* BuySell.swift */; };
+		8D52478C26103A7F007F59C6 /* Buy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D52478B26103A7F007F59C6 /* Buy.swift */; };
+		8D52478F26103AA9007F59C6 /* Sell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D52478E26103AA9007F59C6 /* Sell.swift */; };
+		8D52479326103B04007F59C6 /* PersonalInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D52479226103B04007F59C6 /* PersonalInfo.swift */; };
+		8D52479726103B49007F59C6 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D52479626103B49007F59C6 /* Language.swift */; };
+		8D52479A26103B88007F59C6 /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D52479926103B88007F59C6 /* Wallet.swift */; };
 		8D7FD23126058AAE0091BDFA /* TODO.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 8D7FD23026058AAE0091BDFA /* TODO.rtf */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +46,21 @@
 		8D1F4B45260122090023E7AC /* SupportChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportChatView.swift; sourceTree = "<group>"; };
 		8D1F4B48260124040023E7AC /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		8D1F4B4E26017E6B0023E7AC /* hamburgerMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hamburgerMenuView.swift; sourceTree = "<group>"; };
+		8D524767261023C9007F59C6 /* Invite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Invite.swift; sourceTree = "<group>"; };
+		8D52476A26102E27007F59C6 /* PayOrRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayOrRequest.swift; sourceTree = "<group>"; };
+		8D52476E26102EB0007F59C6 /* HowToFundMyWallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToFundMyWallet.swift; sourceTree = "<group>"; };
+		8D52477226102EDE007F59C6 /* HowToBuyUSD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToBuyUSD.swift; sourceTree = "<group>"; };
+		8D52477526102F31007F59C6 /* HowDoesDurocoinWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowDoesDurocoinWork.swift; sourceTree = "<group>"; };
+		8D52477826102FAC007F59C6 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		8D52477D2610399F007F59C6 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		8D524782261039D6007F59C6 /* LogoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutView.swift; sourceTree = "<group>"; };
+		8D52478526103A07007F59C6 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		8D52478826103A4C007F59C6 /* BuySell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuySell.swift; sourceTree = "<group>"; };
+		8D52478B26103A7F007F59C6 /* Buy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buy.swift; sourceTree = "<group>"; };
+		8D52478E26103AA9007F59C6 /* Sell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sell.swift; sourceTree = "<group>"; };
+		8D52479226103B04007F59C6 /* PersonalInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfo.swift; sourceTree = "<group>"; };
+		8D52479626103B49007F59C6 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
+		8D52479926103B88007F59C6 /* Wallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
 		8D7FD23026058AAE0091BDFA /* TODO.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = TODO.rtf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,13 +94,13 @@
 		8D1F4B2126000A270023E7AC /* Durocoin */ = {
 			isa = PBXGroup;
 			children = (
+				8D52479126103AEC007F59C6 /* Settings */,
+				8D52477C2610398B007F59C6 /* hamburgerMenu */,
+				8D52476D26102E7E007F59C6 /* Support */,
 				8D524761260FFD92007F59C6 /* Wallet */,
 				8D1F4B2226000A270023E7AC /* DurocoinApp.swift */,
 				8D1F4B2426000A270023E7AC /* ContentView.swift */,
-				8D1F4B4E26017E6B0023E7AC /* hamburgerMenuView.swift */,
-				8D1F4B3C260114D00023E7AC /* SupportView.swift */,
-				8D1F4B48260124040023E7AC /* SettingsView.swift */,
-				8D1F4B45260122090023E7AC /* SupportChatView.swift */,
+				8D52477826102FAC007F59C6 /* LoginView.swift */,
 				8D1F4B2626000A2B0023E7AC /* Assets.xcassets */,
 				8D1F4B2B26000A2B0023E7AC /* Info.plist */,
 				8D1F4B2826000A2B0023E7AC /* Preview Content */,
@@ -91,8 +121,47 @@
 			isa = PBXGroup;
 			children = (
 				8D1F4B322600273A0023E7AC /* WalletView.swift */,
+				8D524767261023C9007F59C6 /* Invite.swift */,
+				8D52476A26102E27007F59C6 /* PayOrRequest.swift */,
 			);
 			path = Wallet;
+			sourceTree = "<group>";
+		};
+		8D52476D26102E7E007F59C6 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				8D1F4B3C260114D00023E7AC /* SupportView.swift */,
+				8D1F4B45260122090023E7AC /* SupportChatView.swift */,
+				8D52476E26102EB0007F59C6 /* HowToFundMyWallet.swift */,
+				8D52477226102EDE007F59C6 /* HowToBuyUSD.swift */,
+				8D52477526102F31007F59C6 /* HowDoesDurocoinWork.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		8D52477C2610398B007F59C6 /* hamburgerMenu */ = {
+			isa = PBXGroup;
+			children = (
+				8D1F4B4E26017E6B0023E7AC /* hamburgerMenuView.swift */,
+				8D52477D2610399F007F59C6 /* MenuView.swift */,
+				8D524782261039D6007F59C6 /* LogoutView.swift */,
+				8D52478526103A07007F59C6 /* MainView.swift */,
+				8D52478826103A4C007F59C6 /* BuySell.swift */,
+				8D52478B26103A7F007F59C6 /* Buy.swift */,
+				8D52478E26103AA9007F59C6 /* Sell.swift */,
+			);
+			path = hamburgerMenu;
+			sourceTree = "<group>";
+		};
+		8D52479126103AEC007F59C6 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				8D1F4B48260124040023E7AC /* SettingsView.swift */,
+				8D52479226103B04007F59C6 /* PersonalInfo.swift */,
+				8D52479626103B49007F59C6 /* Language.swift */,
+				8D52479926103B88007F59C6 /* Wallet.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,13 +234,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D52478C26103A7F007F59C6 /* Buy.swift in Sources */,
 				8D1F4B3D260114D00023E7AC /* SupportView.swift in Sources */,
 				8D1F4B49260124040023E7AC /* SettingsView.swift in Sources */,
+				8D52479726103B49007F59C6 /* Language.swift in Sources */,
 				8D1F4B46260122090023E7AC /* SupportChatView.swift in Sources */,
 				8D1F4B2526000A270023E7AC /* ContentView.swift in Sources */,
+				8D52476B26102E27007F59C6 /* PayOrRequest.swift in Sources */,
 				8D1F4B2326000A270023E7AC /* DurocoinApp.swift in Sources */,
 				8D1F4B332600273B0023E7AC /* WalletView.swift in Sources */,
+				8D524783261039D6007F59C6 /* LogoutView.swift in Sources */,
+				8D52477E2610399F007F59C6 /* MenuView.swift in Sources */,
+				8D52478626103A07007F59C6 /* MainView.swift in Sources */,
+				8D52478F26103AA9007F59C6 /* Sell.swift in Sources */,
+				8D52477626102F31007F59C6 /* HowDoesDurocoinWork.swift in Sources */,
+				8D52479A26103B88007F59C6 /* Wallet.swift in Sources */,
+				8D52479326103B04007F59C6 /* PersonalInfo.swift in Sources */,
+				8D524768261023C9007F59C6 /* Invite.swift in Sources */,
+				8D52477326102EDE007F59C6 /* HowToBuyUSD.swift in Sources */,
+				8D52477926102FAC007F59C6 /* LoginView.swift in Sources */,
+				8D52478926103A4C007F59C6 /* BuySell.swift in Sources */,
 				8D1F4B4F26017E6B0023E7AC /* hamburgerMenuView.swift in Sources */,
+				8D52476F26102EB0007F59C6 /* HowToFundMyWallet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

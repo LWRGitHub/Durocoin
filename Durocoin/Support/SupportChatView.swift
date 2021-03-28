@@ -9,9 +9,7 @@ import SwiftUI
 
 
 struct SupportChatView: View {
-    
-    
-    
+   
     var body: some View {
         ZStack{
             Rectangle()
