@@ -73,21 +73,22 @@ struct MenuView: View {
         GeometryReader { geometry in
             HStack{
                 VStack(alignment: .leading) {
-                    HStack(spacing: 35){
-                        Text("Hi, UserName")
-                            .font(.largeTitle)
-                            .padding(.bottom, 10.0)
-                            .padding(.leading, 15.0)
-                            .padding(.top, 50.0)
-                        
-                        Button("Logout") {
-                            showingAlert.toggle()
-                        }
-                        .alert(isPresented: $showingAlert) {
-                            Alert(title: Text("Logout"), message: Text("Are you sure, you want to logout?"), primaryButton: .default(Text("No")), secondaryButton: .default(Text("Yes")))
-                        }
-                        .padding(.bottom, 25.0)
+                    
+                    Button("Logout") {
+                        showingAlert.toggle()
                     }
+                    .alert(isPresented: $showingAlert) {
+                        Alert(title: Text("Logout"), message: Text("Are you sure, you want to logout?"), primaryButton: .default(Text("No")), secondaryButton: .default(Text("Yes")))
+                    }
+                    .padding(.top, 40.0)
+                    .padding(.bottom, 5.0)
+                    .padding(.leading, 15.0)
+                    
+                    Text("Hi, UserName")
+                        .font(.largeTitle)
+                        .padding(.bottom, 10.0)
+                        .padding(.leading, 15.0)
+                        
                     Rectangle()
                         .fill(Color.gray)
                         .frame(width: geometry.size.width, height: 1)
@@ -95,10 +96,10 @@ struct MenuView: View {
                     HStack(spacing: 50){
                         Text("Đ 2,358.73")
                             .padding(.leading, 15.0)
-                        Text("Transfer money")
+                        Text("Buy/Sell Đuros")
                             .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
                             .sheet(isPresented: $isTransferMoney){
-                                TransferMoney(isTransferMoney: $isTransferMoney)
+                                BuySell(isTransferMoney: $isTransferMoney)
                             }
                             .onTapGesture {
                                 isTransferMoney.toggle()
@@ -178,7 +179,7 @@ struct MainView: View {
     }
 }
 
-struct TransferMoney: View {
+struct BuySell: View {
     @Binding var isTransferMoney: Bool
     @State private var isBizDays = false
     @State private var isInstant = false
@@ -193,7 +194,7 @@ struct TransferMoney: View {
                 .onTapGesture {
                     isTransferMoney.toggle()
             }
-            Text("Transfer Money")
+            Text("Buy/Sell Đuros")
                 .font(.title)
                 .padding(.all, -1.0)
             Rectangle()
@@ -211,7 +212,7 @@ struct TransferMoney: View {
                         .padding(.bottom, 15.0)
                         .foregroundColor(.gray)
                 }
-                Text("Transfer up to Đ 0.00")
+                Text("Buy/Sell up to Đ 0.00")
                     .font(.system(size: 11.0))
                     .padding(.all, 2.0)
             }
@@ -225,12 +226,17 @@ struct TransferMoney: View {
                                 LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 0.09437356223, green: 0.775731039, blue: 1, alpha: 1)), .blue]), startPoint: .topLeading, endPoint: .bottomTrailing)
                                 )
                             .frame(width: 45, height: 45)
-                        Image(systemName: "bolt.fill")
-                            .padding(.all, 3.0)
-                            .font(.system(size: 28.0))
+                        Image(systemName: "tag")
+                            .padding(.top, 20.0)
+                            .font(.system(size: 15.0))
+                            .foregroundColor(.white)
+                        Text("Buy")
+                            .fontWeight(.bold)
+                            .padding(.bottom, 15.0)
+                            .font(.system(size: 15.0))
                             .foregroundColor(.white)
                     }
-                    Text("Instant")
+                    Text("Buy Đuros")
                         .font(.system(size: 20.0))
                     Text("1% fee (max Đ10.00)")
                         .font(.system(size: 11.0))
@@ -242,7 +248,7 @@ struct TransferMoney: View {
                                 .stroke(Color.gray, style: StrokeStyle(lineWidth: 1))
                         )
                 .sheet(isPresented: $isInstant){
-                    Instant(isInstant: $isInstant)
+                    Buy(isInstant: $isInstant)
                 }
                 .onTapGesture {
                     isInstant.toggle()
@@ -254,14 +260,19 @@ struct TransferMoney: View {
                                 LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 0.09437356223, green: 0.775731039, blue: 1, alpha: 1)), .blue]), startPoint: .topLeading, endPoint: .bottomTrailing)
                                 )
                             .frame(width: 45, height: 45)
-                        Image(systemName: "building.columns")
-                            .padding(.all, 3.0)
-                            .font(.system(size: 22.0))
+                        Image(systemName: "tag")
+                            .padding(.top, 20.0)
+                            .font(.system(size: 15.0))
+                            .foregroundColor(.white)
+                        Text("Sell")
+                            .fontWeight(.bold)
+                            .padding(.bottom, 15.0)
+                            .font(.system(size: 15.0))
                             .foregroundColor(.white)
                     }
-                    Text("1-3 biz days")
+                    Text("Sell Đuros")
                         .font(.system(size: 20.0))
-                    Text("No fee")
+                    Text("1% fee (max Đ10.00)")
                         .font(.system(size: 11.0))
                         .foregroundColor(.gray)
                 }
@@ -271,7 +282,7 @@ struct TransferMoney: View {
                                 .stroke(Color.gray, style: StrokeStyle(lineWidth: 1))
                         )
                 .sheet(isPresented: $isBizDays){
-                    BizDays(isBizDays: $isBizDays)
+                    Sell(isBizDays: $isBizDays)
                 }
                 .onTapGesture {
                     isBizDays.toggle()
@@ -283,7 +294,7 @@ struct TransferMoney: View {
 }
 
 
-struct Instant: View {
+struct Buy: View {
     @Binding var isInstant: Bool
     
     var body: some View {
@@ -296,7 +307,7 @@ struct Instant: View {
                 .onTapGesture {
                     isInstant.toggle()
             }
-            Text("Instant Transfer")
+            Text("Choice How")
                 .font(.title)
                 .padding(.all, -1.0)
             Rectangle()
@@ -307,12 +318,12 @@ struct Instant: View {
                 .fill(Color.gray)
                 .frame(width: 500, height: 1)
             HStack(spacing: 20){
-                Image(systemName: "building.columns")
-                    .font(.system(size: 25.0))
+                Image(systemName: "bitcoinsign.circle.fill")
+                    .font(.system(size: 30.0))
                     .foregroundColor(Color(#colorLiteral(red: 0.09437356223, green: 0.775731039, blue: 1, alpha: 1)))
                 VStack(alignment: .leading){
-                    Text("Bank")
-                    Text("For eligible banks.")
+                    Text("Bitcoin")
+                    Text("Buy Đuros With Bitcoin.")
                         .foregroundColor(.gray)
                 }
                 .frame(width: 285, height: 65, alignment: .leading)
@@ -325,12 +336,12 @@ struct Instant: View {
                 .fill(Color.gray)
                 .frame(width: 500, height: 1)
             HStack(spacing: 20){
-                Image(systemName: "creditcard")
+                Image(systemName: "bitcoinsign.square")
                     .font(.system(size: 25.0))
                     .foregroundColor(Color(#colorLiteral(red: 0.09437356223, green: 0.775731039, blue: 1, alpha: 1)))
                 VStack(alignment: .leading){
-                    Text("Debit Card")
-                    Text("For eligible debit cards.")
+                    Text("Other Crypto")
+                    Text("Buy Đuros With Some Other Cypto.")
                         .foregroundColor(.gray)
                 }
                 .frame(width: 285, height: 65, alignment: .leading)
@@ -347,7 +358,7 @@ struct Instant: View {
     }
 }
 
-struct BizDays: View {
+struct Sell: View {
     @Binding var isBizDays: Bool
     
     var body: some View {
@@ -371,15 +382,15 @@ struct BizDays: View {
                 .fill(Color.gray)
                 .frame(width: 500, height: 1)
             HStack(spacing: 20){
-                Image(systemName: "doc.text.magnifyingglass")
+                Image(systemName: "bitcoinsign.circle")
                     .font(.system(size: 25.0))
                     .foregroundColor(Color(#colorLiteral(red: 0.09437356223, green: 0.775731039, blue: 1, alpha: 1)))
                 VStack(alignment: .leading){
-                    Text("Instant Verification")
-                    Text("Sign in to your bank to instantly verify your bank account.")
+                    Text("Bitcoin")
+                    Text("Sell Đuros for Bitcoin.")
                         .foregroundColor(.gray)
                 }
-                .frame(width: 285, height: 65)
+                .frame(width: 285, height: 65, alignment: .leading)
                 Image(systemName: "arrow.right.circle.fill")
                     .font(.system(size: 25.0))
                     .foregroundColor(.gray)
@@ -389,15 +400,15 @@ struct BizDays: View {
                 .fill(Color.gray)
                 .frame(width: 500, height: 1)
             HStack(spacing: 20){
-                Image(systemName: "doc.text.magnifyingglass")
+                Image(systemName: "bitcoinsign.square")
                     .font(.system(size: 25.0))
                     .foregroundColor(Color(#colorLiteral(red: 0.09437356223, green: 0.775731039, blue: 1, alpha: 1)))
                 VStack(alignment: .leading){
-                    Text("Manual Verification")
-                    Text("Use your bank's account & routing number. Takes up to 3 business days.")
+                    Text("Other Crypto")
+                    Text("Sell Đuros for Other Crypto.")
                         .foregroundColor(.gray)
                 }
-                .frame(width: 285, height: 65)
+                .frame(width: 285, height: 65, alignment: .leading)
                 Image(systemName: "arrow.right.circle.fill")
                     .font(.system(size: 25.0))
                     .foregroundColor(.gray)

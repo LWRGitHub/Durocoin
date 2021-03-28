@@ -82,6 +82,7 @@ struct LoginView: View {
                 }
                 .lineLimit(/*@START_MENU_TOKEN@*/2/*@END_MENU_TOKEN@*/)
         }
+        .frame(width: UIScreen.main.bounds.width, alignment: .center)
     }
 }
 

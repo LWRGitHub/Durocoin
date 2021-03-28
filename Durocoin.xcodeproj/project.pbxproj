@@ -64,13 +64,13 @@
 		8D1F4B2126000A270023E7AC /* Durocoin */ = {
 			isa = PBXGroup;
 			children = (
+				8D524761260FFD92007F59C6 /* Wallet */,
 				8D1F4B2226000A270023E7AC /* DurocoinApp.swift */,
 				8D1F4B2426000A270023E7AC /* ContentView.swift */,
 				8D1F4B4E26017E6B0023E7AC /* hamburgerMenuView.swift */,
 				8D1F4B3C260114D00023E7AC /* SupportView.swift */,
 				8D1F4B48260124040023E7AC /* SettingsView.swift */,
 				8D1F4B45260122090023E7AC /* SupportChatView.swift */,
-				8D1F4B322600273A0023E7AC /* WalletView.swift */,
 				8D1F4B2626000A2B0023E7AC /* Assets.xcassets */,
 				8D1F4B2B26000A2B0023E7AC /* Info.plist */,
 				8D1F4B2826000A2B0023E7AC /* Preview Content */,
@@ -85,6 +85,14 @@
 				8D1F4B2926000A2B0023E7AC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8D524761260FFD92007F59C6 /* Wallet */ = {
+			isa = PBXGroup;
+			children = (
+				8D1F4B322600273A0023E7AC /* WalletView.swift */,
+			);
+			path = Wallet;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

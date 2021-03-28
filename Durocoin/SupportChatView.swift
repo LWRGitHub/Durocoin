@@ -45,6 +45,7 @@ struct SupportChatView: View {
                 }
             }
         }
+        .frame(width: UIScreen.main.bounds.width, alignment: .center)
     }
 }
 

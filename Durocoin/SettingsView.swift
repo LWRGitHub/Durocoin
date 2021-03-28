@@ -60,6 +60,7 @@ struct SettingsView: View {
             }
         }
         .navigationBarTitle("Settings")
+        .frame(width: UIScreen.main.bounds.width, alignment: .center)
     }
 }
 
@@ -171,6 +172,7 @@ struct PersonalInfo: View {
                     )
                 .cornerRadius(10.0)
         }
+        .frame(width: UIScreen.main.bounds.width, alignment: .center)
     }
 }
 
@@ -211,6 +213,7 @@ struct Language: View {
                     )
                 .cornerRadius(10.0)
         }
+        .frame(width: UIScreen.main.bounds.width, alignment: .center)
     }
 }
 
@@ -247,6 +250,7 @@ struct Wallet: View {
                     )
                 .cornerRadius(10.0)
         }
+        .frame(width: UIScreen.main.bounds.width, alignment: .center)
     }
 }
 
