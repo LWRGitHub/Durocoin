@@ -47,145 +47,147 @@ struct WalletView: View {
                     .padding(.top, 150)
                     
                     ScrollView(.vertical, showsIndicators: false) {
-                        ZStack{
-                            VStack(spacing: 0){
-                                ZStack{
-                                    Rectangle()
-                                        .fill(Color.white)
-                                        .frame(width: 500, height: 99)
-                                        .padding(0)
-                                    VStack{
-                                        HStack(spacing: 270){
-                                            ZStack{
-                                                VStack{
-                                                    Text("Lyft")
-                                                }
-                                            }
-                                            ZStack{
-                                                VStack{
-                                                    Text("Đ 10.85")
-                                                        .foregroundColor(.red)
-                                                    Text("USD $12.99")
-                                                        .foregroundColor(.gray)
-                                                        .font(.system(size: 10))
-                                                }
+                        VStack(spacing: 0){
+                            ZStack{
+                                Rectangle()
+                                    .fill(Color.white)
+                                    .frame(width: 500, height: 99)
+                                    .padding(0)
+                                VStack{
+                                    HStack(spacing: 270){
+                                        ZStack{
+                                            VStack{
+                                                Text("Lyft")
                                             }
                                         }
-                                        HStack{
-                                            Text("6:00 pm Monday, March 15 2021")
-                                                .padding(.trailing, 130.0)
-                                                .font(.system(size: 15))
-                                                .foregroundColor(.gray)
+                                        ZStack{
+                                            VStack{
+                                                Text("Đ 10.85")
+                                                    .foregroundColor(.red)
+                                                Text("USD $12.99")
+                                                    .foregroundColor(.gray)
+                                                    .font(.system(size: 10))
+                                            }
                                         }
                                     }
-                                }
-                                
-                                Rectangle()
-                                    .fill(Color.gray)
-                                    .frame(width: 500, height: 1)
-                                
-                                ZStack{
-                                    Rectangle()
-                                        .fill(Color.white)
-                                        .frame(width: 500, height: 99)
-                                    VStack{
-                                        HStack(spacing: 210){
-                                            ZStack{
-                                                VStack{
-                                                    Text("Chase Bank")
-                                                }
-                                            }
-                                            ZStack{
-                                                VStack{
-                                                    Text("Đ 10.85")
-                                                        .foregroundColor(.green)
-                                                    Text("USD $12.99")
-                                                        .foregroundColor(.gray)
-                                                        .font(.system(size: 10))
-                                                }
-                                            }
-                                        }
-                                        HStack{
-                                            Text("6:00 pm Monday, March 15 2021")
-                                                .padding(.trailing, 130.0)
-                                                .font(.system(size: 15))
-                                                .foregroundColor(.gray)
-                                        }
+                                    HStack{
+                                        Text("6:00 pm Monday, March 15 2021")
+                                            .padding(.trailing, 130.0)
+                                            .font(.system(size: 15))
+                                            .foregroundColor(.gray)
                                     }
                                 }
-                                
-                                Rectangle()
-                                    .fill(Color.gray)
-                                    .frame(width: 500, height: 1)
-                                
-                                ZStack{
-                                    Rectangle()
-                                        .fill(Color.white)
-                                        .frame(width: 500, height: 99)
-                                    VStack{
-                                        HStack(spacing: 200){
-                                            ZStack{
-                                                VStack{
-                                                    Text("Whole Foods")
-                                                }
-                                            }
-                                            ZStack{
-                                                VStack{
-                                                    Text("Đ 10.85")
-                                                        .foregroundColor(.red)
-                                                    Text("USD $12.99")
-                                                        .foregroundColor(.gray)
-                                                        .font(.system(size: 10))
-                                                }
-                                            }
-                                        }
-                                        HStack{
-                                            Text("6:00 pm Monday, March 15 2021")
-                                                .padding(.trailing, 130.0)
-                                                .font(.system(size: 15))
-                                                .foregroundColor(.gray)
-                                        }
-                                    }
-                                }
-                                
-                                Rectangle()
-                                    .fill(Color.gray)
-                                    .frame(width: 500, height: 1)
-                                
-                                ZStack{
-                                    Rectangle()
-                                        .fill(Color.white)
-                                        .frame(width: 500, height: 99)
-                                    VStack{
-                                        HStack(spacing: 176){
-                                            ZStack{
-                                                VStack{
-                                                    Text("Bitcoin Wallet")
-                                                }
-                                            }
-                                            ZStack{
-                                                VStack{
-                                                    Text("Đ 1005.85")
-                                                        .foregroundColor(.green)
-                                                    Text("USD $1248.99")
-                                                        .foregroundColor(.gray)
-                                                        .font(.system(size: 10))
-                                                }
-                                            }
-                                        }
-                                        HStack{
-                                            Text("6:00 pm Monday, March 15 2021")
-                                                .padding(.trailing, 130.0)
-                                                .font(.system(size: 15))
-                                                .foregroundColor(.gray)
-                                        }
-                                    }
-                                }
-                                
-                                Rectangle()
-                                    .fill(Color.gray)
-                                    .frame(width: 500, height: 1)
                             }
+                            
+                            Rectangle()
+                                .fill(Color.gray)
+                                .frame(width: 500, height: 1)
+                            
+                            ZStack{
+                                Rectangle()
+                                    .fill(Color.white)
+                                    .frame(width: 500, height: 99)
+                                VStack{
+                                    HStack(spacing: 210){
+                                        ZStack{
+                                            VStack{
+                                                Text("Chase Bank")
+                                            }
+                                        }
+                                        ZStack{
+                                            VStack{
+                                                Text("Đ 10.85")
+                                                    .foregroundColor(.green)
+                                                Text("USD $12.99")
+                                                    .foregroundColor(.gray)
+                                                    .font(.system(size: 10))
+                                            }
+                                        }
+                                    }
+                                    HStack{
+                                        Text("6:00 pm Monday, March 15 2021")
+                                            .padding(.trailing, 130.0)
+                                            .font(.system(size: 15))
+                                            .foregroundColor(.gray)
+                                    }
+                                }
+                            }
+                            
+                            Rectangle()
+                                .fill(Color.gray)
+                                .frame(width: 500, height: 1)
+                            
+                            ZStack{
+                                Rectangle()
+                                    .fill(Color.white)
+                                    .frame(width: 500, height: 99)
+                                VStack{
+                                    HStack(spacing: 200){
+                                        ZStack{
+                                            VStack{
+                                                Text("Whole Foods")
+                                            }
+                                        }
+                                        ZStack{
+                                            VStack{
+                                                Text("Đ 10.85")
+                                                    .foregroundColor(.red)
+                                                Text("USD $12.99")
+                                                    .foregroundColor(.gray)
+                                                    .font(.system(size: 10))
+                                            }
+                                        }
+                                    }
+                                    HStack{
+                                        Text("6:00 pm Monday, March 15 2021")
+                                            .padding(.trailing, 130.0)
+                                            .font(.system(size: 15))
+                                            .foregroundColor(.gray)
+                                    }
+                                }
+                            }
+                            
+                            Rectangle()
+                                .fill(Color.gray)
+                                .frame(width: 500, height: 1)
+                            
+                            ZStack{
+                                Rectangle()
+                                    .fill(Color.white)
+                                    .frame(width: 500, height: 99)
+                                VStack{
+                                    HStack(spacing: 176){
+                                        ZStack{
+                                            VStack{
+                                                Text("Bitcoin Wallet")
+                                            }
+                                        }
+                                        ZStack{
+                                            VStack{
+                                                Text("Đ 1005.85")
+                                                    .foregroundColor(.green)
+                                                Text("USD $1248.99")
+                                                    .foregroundColor(.gray)
+                                                    .font(.system(size: 10))
+                                            }
+                                        }
+                                    }
+                                    HStack{
+                                        Text("6:00 pm Monday, March 15 2021")
+                                            .padding(.trailing, 130.0)
+                                            .font(.system(size: 15))
+                                            .foregroundColor(.gray)
+                                    }
+                                }
+                            }
+                            
+                            Rectangle()
+                                .fill(Color.gray)
+                                .frame(width: 500, height: 1)
+                            
+                            Rectangle()
+                                .fill(Color.white)
+                                .frame(width: 500, height: 290)
                         }
                     }
                 }

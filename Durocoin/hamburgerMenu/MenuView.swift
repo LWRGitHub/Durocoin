@@ -52,18 +52,18 @@ struct MenuView: View {
                         .fill(Color.gray)
                         .frame(width: geometry.size.width, height: 1)
                         .padding(.vertical, 10.0)
-                    HStack {
-                        Image(systemName: "creditcard")
-                            .foregroundColor(.black)
-                            .imageScale(.large)
-                            .font(.headline)
-                            .padding(.leading, 15.0)
-                        NavigationLink(destination: WalletView()) {
-                            Text("Wallet")
-                                .foregroundColor(.black)
-                        }
-                    }
-                    .padding(.top, 5)
+//                    HStack {
+//                        Image(systemName: "creditcard")
+//                            .foregroundColor(.black)
+//                            .imageScale(.large)
+//                            .font(.headline)
+//                            .padding(.leading, 15.0)
+//                        NavigationLink(destination: WalletView()) {
+//                            Text("Wallet")
+//                                .foregroundColor(.black)
+//                        }
+//                    }
+//                    .padding(.top, 5)
                     HStack {
                         Image(systemName: "person.fill.questionmark")
                             .foregroundColor(.black)
