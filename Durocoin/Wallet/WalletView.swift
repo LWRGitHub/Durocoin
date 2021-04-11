@@ -13,6 +13,7 @@ struct WalletView: View {
     @State var duroBalance: Double = 2350.03
     @State var showHamburgerMenu: Bool = false
     @State private var showingAlert = false
+    @ObservedObject var networkManager = NetworkManager()
     
     var body: some View {
         NavigationView {
