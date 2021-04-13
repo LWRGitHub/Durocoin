@@ -94,10 +94,12 @@ struct Tx: Decodable {
         case amountInDollars = "amountInDollars"
         case createdAt = "createdAt"
         case msg = "msg"
+//        case sourceName = "source.fullName"
+//        case targetName = "target.fullName"
     }
     
     var id: Int?
     var amountInDuros, amountInDollars: Double?
-    var msg: String?
+    var msg, sourceName: String?
     var createdAt: Date?
 }
