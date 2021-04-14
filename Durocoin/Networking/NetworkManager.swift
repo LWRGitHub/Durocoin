@@ -38,6 +38,7 @@ class NetworkManager: ObservableObject {
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             if let err = error {
                 print("Error fetching from txAPI: ", err.localizedDescription)
+                return
             }
             do {
                 DispatchQueue.main.async {

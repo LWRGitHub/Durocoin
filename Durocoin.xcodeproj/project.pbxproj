@@ -100,6 +100,7 @@
 		8D1F4B2126000A270023E7AC /* Durocoin */ = {
 			isa = PBXGroup;
 			children = (
+				8DCE6202262773740043DB07 /* Networking */,
 				8D27283E262137560091C29B /* Models */,
 				8D52479126103AEC007F59C6 /* Settings */,
 				8D52477C2610398B007F59C6 /* hamburgerMenu */,
@@ -112,7 +113,6 @@
 				8D1F4B2B26000A2B0023E7AC /* Info.plist */,
 				8D1F4B2826000A2B0023E7AC /* Preview Content */,
 				8D7FD23026058AAE0091BDFA /* TODO.rtf */,
-				8DE58DC92622400E00F6F043 /* NetworkManager.swift */,
 			);
 			path = Durocoin;
 			sourceTree = "<group>";
@@ -179,6 +179,14 @@
 				8D52479926103B88007F59C6 /* Wallet.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		8DCE6202262773740043DB07 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				8DE58DC92622400E00F6F043 /* NetworkManager.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
