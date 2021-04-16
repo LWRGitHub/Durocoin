@@ -7,147 +7,8 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "3A873732-5B94-4D65-AAE9-68CEA9B2EACA"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Durocoin/Wallet/WalletView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
-            landmarkName = "WalletView"
-            landmarkType = "14">
-            <Locations>
-               <Location
-                  uuid = "3A873732-5B94-4D65-AAE9-68CEA9B2EACA - f88f60d99abdc325"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "property wrapper backing initializer of Durocoin.WalletView.networkManager : Durocoin.NetworkManager"
-                  moduleName = "Durocoin"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/LWR/dev/Duro/duro-ios/Durocoin/Wallet/WalletView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "16"
-                  endingLineNumber = "16"
-                  offsetFromSymbolStart = "24">
-               </Location>
-               <Location
-                  uuid = "3A873732-5B94-4D65-AAE9-68CEA9B2EACA - e96afc03b83a05ae"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Durocoin.WalletView.networkManager.getter : Durocoin.NetworkManager"
-                  moduleName = "Durocoin"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/LWR/dev/Duro/duro-ios/Durocoin/Wallet/WalletView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "16"
-                  endingLineNumber = "16"
-                  offsetFromSymbolStart = "60">
-               </Location>
-               <Location
-                  uuid = "3A873732-5B94-4D65-AAE9-68CEA9B2EACA - 1f0fa5c28061183a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Durocoin.WalletView.networkManager.setter : Durocoin.NetworkManager"
-                  moduleName = "Durocoin"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/LWR/dev/Duro/duro-ios/Durocoin/Wallet/WalletView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "16"
-                  endingLineNumber = "16"
-                  offsetFromSymbolStart = "74">
-               </Location>
-               <Location
-                  uuid = "3A873732-5B94-4D65-AAE9-68CEA9B2EACA - 496320d1ccf54c53"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Durocoin.WalletView.networkManager.modify : Durocoin.NetworkManager"
-                  moduleName = "Durocoin"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/LWR/dev/Duro/duro-ios/Durocoin/Wallet/WalletView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "14">
-               </Location>
-               <Location
-                  uuid = "3A873732-5B94-4D65-AAE9-68CEA9B2EACA - 129171a7d45b371a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Durocoin.WalletView.networkManager.modify : Durocoin.NetworkManager with unmangled suffix &quot;.resume.0&quot;"
-                  moduleName = "Durocoin"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/LWR/dev/Duro/duro-ios/Durocoin/Wallet/WalletView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "16"
-                  endingLineNumber = "16"
-                  offsetFromSymbolStart = "4">
-               </Location>
-               <Location
-                  uuid = "3A873732-5B94-4D65-AAE9-68CEA9B2EACA - 83ee43f10069218a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Durocoin.WalletView.$networkManager.getter : SwiftUI.ObservedObject&lt;Durocoin.NetworkManager&gt;.Wrapper"
-                  moduleName = "Durocoin"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/LWR/dev/Duro/duro-ios/Durocoin/Wallet/WalletView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "16"
-                  endingLineNumber = "16"
-                  offsetFromSymbolStart = "98">
-               </Location>
-               <Location
-                  uuid = "3A873732-5B94-4D65-AAE9-68CEA9B2EACA - c33a4a08db0b2fc3"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Durocoin.WalletView.init() -&gt; Durocoin.WalletView"
-                  moduleName = "Durocoin"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/LWR/dev/Duro/duro-ios/Durocoin/Wallet/WalletView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "16"
-                  endingLineNumber = "16"
-                  offsetFromSymbolStart = "430">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "B6FFF763-33FF-40CA-8DC9-31A981F972F2"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Durocoin/Networking/NetworkManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "init()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "46F2B8DE-52A1-4F8B-8543-D8CBBBFC65FB"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Durocoin/Networking/NetworkManager.swift"
@@ -163,14 +24,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "9B937D13-5EE9-4E0E-A181-49AB5CC2EC1E"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Durocoin/Networking/NetworkManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
             landmarkName = "getData()"
             landmarkType = "7">
          </BreakpointContent>
@@ -178,49 +39,17 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "4E59608C-6081-4486-81B3-3984FF6262FE"
-            shouldBeEnabled = "Yes"
+            uuid = "9C41548B-5F89-4087-A393-22FD8318C7DF"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Durocoin/Networking/NetworkManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
             landmarkName = "getData()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "4E59608C-6081-4486-81B3-3984FF6262FE - f0f4fecbf43745a6"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Durocoin.NetworkManager.getData() -&gt; ()"
-                  moduleName = "Durocoin"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/LWR/dev/Duro/duro-ios/Durocoin/Networking/NetworkManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "38"
-                  endingLineNumber = "38"
-                  offsetFromSymbolStart = "1240">
-               </Location>
-               <Location
-                  uuid = "4E59608C-6081-4486-81B3-3984FF6262FE - f9a2ed3e8e04ee6f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Durocoin.NetworkManager.getData() -&gt; ()"
-                  moduleName = "Durocoin"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/LWR/dev/Duro/duro-ios/Durocoin/Networking/NetworkManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "39"
-                  endingLineNumber = "39"
-                  offsetFromSymbolStart = "268">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

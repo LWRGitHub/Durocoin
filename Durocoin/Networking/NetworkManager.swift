@@ -7,14 +7,14 @@
 
 import Foundation
 
-let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjE4MjcyNzYwLCJleHAiOjE2MjM0NTY3NjB9.W_3giqf5cfP_EfKLrD9LtE5b94wgNowAXqjQRxayUY4"
+let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjE4MDg0MTYzLCJleHAiOjE2MjMyNjgxNjN9.t7EL4zBs9IlNoeQnRCyGAjpWYtPNGTdNiSrnfw836TE"
 
 class NetworkManager: ObservableObject {
 //    static func getArticles(completion:((_ json: Data?) -> Void)) {
 //        completion(Data(articles.utf8))
 //    }
     
-    @Published var txs: TxArray?
+    @Published var txs: [Tx]?
     @Published var isLoading = false
     
     init() {
@@ -41,10 +41,21 @@ class NetworkManager: ObservableObject {
                 return
             }
             do {
+//                guard let data = data, error == nil else { return }
+//
+//                   do {
+//                       let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [[String:Any]]
+//                       //let posts = json["posts"] as? [[String: Any]] ?? []
+//                       print(json)
+//                   } catch let error as NSError {
+//                       print(error)
+//                   }
+                
                 DispatchQueue.main.async {
-                    let txs = try! JSONDecoder().decode(TxArray.self, from: data!)
+                    let txs = try! JSONDecoder().decode([Tx].self, from: data!)
                     self.isLoading = false
                     self.txs = txs
+                    
                 }
             }
         }.resume()

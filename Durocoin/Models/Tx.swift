@@ -5,7 +5,7 @@
 //  Created by Logan Reynolds on 4/9/21.
 //
 
-//[
+// [
 //  {
 //    "amountInDuros": "400.00",
 //    "amountInDollars": "480.00",
@@ -19,27 +19,15 @@
 //    "externalSourceId": null,
 //    "externalTargetId": null,
 //    "source": {
-//      "balanceInDuros": "10200.00",
 //      "id": 1,
-//      "fullName": "Logan Reynolds",
-//      "email": "logan@email.com",
-//      "password": "$2b$10$N40Q.b2d07h5FvlHstqJ0.JZOoDyiDsibuEXOeKoIZo1SU2VtGioe",
-//      "balanceInCents": 1020000,
-//      "createdAt": "2021-04-10T19:44:39.368Z",
-//      "updatedAt": "2021-04-10T19:49:51.077Z"
+//      "fullName": "Logan Reynolds"
 //    },
 //    "target": {
-//      "balanceInDuros": "9800.00",
 //      "id": 2,
-//      "fullName": "User2",
-//      "email": "user2@email.com",
-//      "password": "$2b$10$dwqJl7RY/Lxzj2///QQX8uvepvm0/MdPqABXAPrDwJ18HIW8ng7C2",
-//      "balanceInCents": 980000,
-//      "createdAt": "2021-04-10T19:46:24.680Z",
-//      "updatedAt": "2021-04-10T19:49:51.077Z"
+//      "fullName": "User2"
 //    },
-//    "externalSource": null,
-//    "externalTarget": null
+//    "externalTarget": null,
+//    "externalSource": null
 //  },
 //  {
 //    "amountInDuros": "600.00",
@@ -54,52 +42,60 @@
 //    "externalSourceId": null,
 //    "externalTargetId": null,
 //    "source": {
-//      "balanceInDuros": "9800.00",
 //      "id": 2,
-//      "fullName": "User2",
-//      "email": "user2@email.com",
-//      "password": "$2b$10$dwqJl7RY/Lxzj2///QQX8uvepvm0/MdPqABXAPrDwJ18HIW8ng7C2",
-//      "balanceInCents": 980000,
-//      "createdAt": "2021-04-10T19:46:24.680Z",
-//      "updatedAt": "2021-04-10T19:49:51.077Z"
+//      "fullName": "User2"
 //    },
 //    "target": {
-//      "balanceInDuros": "10200.00",
 //      "id": 1,
-//      "fullName": "Logan Reynolds",
-//      "email": "logan@email.com",
-//      "password": "$2b$10$N40Q.b2d07h5FvlHstqJ0.JZOoDyiDsibuEXOeKoIZo1SU2VtGioe",
-//      "balanceInCents": 1020000,
-//      "createdAt": "2021-04-10T19:44:39.368Z",
-//      "updatedAt": "2021-04-10T19:49:51.077Z"
+//      "fullName": "Logan Reynolds"
 //    },
-//    "externalSource": null,
-//    "externalTarget": null
+//    "externalTarget": null,
+//    "externalSource": null
 //  }
 //]
 
 import Foundation
 
-/// Array of Tx objects.
-struct TxArray: Decodable {
-    private enum CodingKeys : String, CodingKey { case txs = "txs" }
-    let txs: [Tx]
+
+///// Stores the original Tx
+//struct Tx: Decodable {
+//    private enum CodingKeys: String, CodingKey {
+//        case id = "id"
+//        case amountInDuros = "amountInDuros"
+//        case amountInDollars = "amountInDollars"
+//        case createdAt = "createdAt"
+//        case msg = "msg"
+//        case sourceName = "source.fullName"
+////        case targetName = "target.fullName"
+//    }
+//
+//    var id: Int?
+//    var amountInDuros, amountInDollars: String?
+//    var msg, sourceName: String?
+//    var createdAt: String?
+//}
+
+// MARK: - WelcomeElement
+struct Tx: Decodable {
+    let amountInDuros, amountInDollars: String
+    let id: Int
+    let msg: String
+    let amountInCents: Int
+    let createdAt, updatedAt: String
+    let sourceID, targetID: Int
+    let source, target: Source
+
+
+    enum CodingKeys: String, CodingKey {
+        case amountInDuros, amountInDollars, id, msg, amountInCents, createdAt, updatedAt
+        case sourceID = "sourceId"
+        case targetID = "targetId"
+        case source, target
+    }
 }
 
-/// Stores the original Tx
-struct Tx: Decodable {
-    private enum CodingKeys: String, CodingKey {
-        case id = "id"
-        case amountInDuros = "amountInDuros"
-        case amountInDollars = "amountInDollars"
-        case createdAt = "createdAt"
-        case msg = "msg"
-//        case sourceName = "source.fullName"
-//        case targetName = "target.fullName"
-    }
-    
-    var id: Int?
-    var amountInDuros, amountInDollars: Double?
-    var msg, sourceName: String?
-    var createdAt: Date?
+// MARK: - Source
+struct Source: Codable {
+    let id: Int
+    let fullName: String
 }
