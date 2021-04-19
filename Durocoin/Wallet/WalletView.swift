@@ -45,12 +45,13 @@ struct WalletView: View {
                     .padding(.bottom, 20.0)
                     .padding(.top, 10)
 
-                    ZStack{
+                    VStack{
                         ScrollView(.vertical, showsIndicators: false) {
                             VStack(spacing: 0){
                                 if networkManager.isLoading {
                                     Text("Loading")
                                 } else {
+//                                    Text("Here")
                                     List (networkManager.txs!, id: \.id) { tx in
                                         TxView(tx: tx)
                                     }
@@ -58,7 +59,7 @@ struct WalletView: View {
                             }
                         }
                         .padding(0.0)
-                        .frame(width: 700, height: 500)
+                        .frame(width: 375, height: 500)
                         .background(Color.white.edgesIgnoringSafeArea(.all))
                         
                         
@@ -140,7 +141,7 @@ struct TxView: View {
                 }
                 HStack{
                     Text("6:00 pm Monday, March 15 2021")
-                        .padding(.trailing, 130.0)
+//                        .padding(.trailing, 130.0)
                         .font(.system(size: 15))
                         .foregroundColor(.gray)
                 }
