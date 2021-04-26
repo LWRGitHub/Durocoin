@@ -78,12 +78,12 @@ import Foundation
 // MARK: - WelcomeElement
 struct Tx: Decodable {
     let amountInDuros, amountInDollars: String
-    let id: Int
+    let id: String
     let msg: String
     let amountInCents: Int
     let createdAt, updatedAt: String
-    let sourceID, targetID: Int
-    let source, target: Source
+    let sourceID, targetID: String?
+    let source, target: Source?
 
 
     enum CodingKeys: String, CodingKey {
@@ -96,6 +96,6 @@ struct Tx: Decodable {
 
 // MARK: - Source
 struct Source: Codable {
-    let id: Int
+    let id: String
     let fullName: String
 }

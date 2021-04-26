@@ -12,8 +12,12 @@ struct ContentView: View {
     
     var body: some View {
         ZStack{
+            //if isNotLogged in
+            // show LoginView
+            //else
+            // hamburgerMenuView
             hamburgerMenuView()
-                .sheet(isPresented: $isNotLoggedIn) {
+                .fullScreenCover(isPresented: $isNotLoggedIn) {
                     LoginView()
             }
         }

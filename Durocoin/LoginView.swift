@@ -10,6 +10,7 @@ import SwiftUI
 struct LoginView: View {
     @State var email: String = ""
     @State var password: String = ""
+    @Environment(\.presentationMode) var presentationMode
 //    @Binding var isNotLoggedIn: Bool
 //    @State var ShowLogout: Bool
 
@@ -25,7 +26,9 @@ struct LoginView: View {
                     Spacer()
                     Text("Dont have a wallet yet?")
                         .padding(.bottom, 15)
-                    Button(action: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/{}/*@END_MENU_TOKEN@*/) {
+                    Button(action: {
+                        getLogin(email: email, password: password)
+                    }) {
                         Text("Sign Up")
                             .font(.headline)
                             .fontWeight(.bold)
@@ -43,6 +46,9 @@ struct LoginView: View {
                         .padding(30)
 
                     NavigationLink(destination: ContentView()) {
+                        Button(action: {
+                            getLogin(email: email, password: password)
+                        }) {
                         Text("Login")
                             .font(.headline)
                             .foregroundColor(.white)
@@ -52,6 +58,7 @@ struct LoginView: View {
                                 LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 0.09437356223, green: 0.775731039, blue: 1, alpha: 1)), .blue]), startPoint: .topLeading, endPoint: .bottomTrailing)
                                 )
                             .cornerRadius(10.0)
+                        }
                     }
                     Spacer()
                     Spacer()
@@ -60,6 +67,39 @@ struct LoginView: View {
                 .lineLimit(/*@START_MENU_TOKEN@*/2/*@END_MENU_TOKEN@*/)
         }
         .frame(width: UIScreen.main.bounds.width, alignment: .center)
+    }
+    func getLogin(email: String, password: String){
+        guard let url = URL(string: "https://duro-web.herokuapp.com/api/sign-in") else { return }
+
+        let parameters = [
+            "email": email,
+            "password": password
+        ]
+        
+        guard let httpBodyData = try? JSONSerialization.data(withJSONObject: parameters, options: []) else{ return }
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpBody = httpBodyData
+        
+        
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            if let err = error {
+                print("Error fetching from txAPI: ", err.localizedDescription)
+                return
+            }
+            do {
+                //safely unwrap data
+                let token = String(data: data!, encoding: .utf8)
+                UserDefaults.standard.setValue(token, forKey: "token")
+                DispatchQueue.main.async {
+                    presentationMode.wrappedValue.dismiss()
+                }
+                
+            }catch {
+                print(error)
+            }
+        }.resume()
     }
 }
 

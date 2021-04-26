@@ -49,10 +49,11 @@ struct WalletView: View {
                         ScrollView(.vertical, showsIndicators: false) {
                             VStack(spacing: 0){
                                 if networkManager.isLoading {
-                                    Text("Loading")
+                                    Text("Loading...")
+                                        .padding(.top, 15.0)
                                 } else {
-//                                    Text("Here")
-                                    List (networkManager.txs!, id: \.id) { tx in
+//                                    Text("here")
+                                    ForEach (networkManager.txs!, id: \.id) { tx in
                                         TxView(tx: tx)
                                     }
                                 }
@@ -110,6 +111,8 @@ struct WalletView: View {
         .navigationBarTitle("Wallet")
         .frame(width: UIScreen.main.bounds.width, alignment: .center)
     }
+    
+    
 }
 
 
@@ -123,10 +126,10 @@ struct TxView: View {
                 .frame(width: 500, height: 99)
                 .padding(0)
             VStack{
-                HStack(spacing: 270){
+                HStack(spacing: 0){
                     ZStack{
                         VStack{
-                            Text(tx.source.fullName ?? "Unavailable")
+                            Text(tx.source?.fullName ?? "Unavailable")
                         }
                     }
                     ZStack{
@@ -141,7 +144,7 @@ struct TxView: View {
                 }
                 HStack{
                     Text("6:00 pm Monday, March 15 2021")
-//                        .padding(.trailing, 130.0)
+                        .padding(.trailing, 130.0)
                         .font(.system(size: 15))
                         .foregroundColor(.gray)
                 }
