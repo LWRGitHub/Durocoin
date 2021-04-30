@@ -52,7 +52,6 @@ struct WalletView: View {
                                     Text("Loading...")
                                         .padding(.top, 15.0)
                                 } else {
-//                                    Text("here")
                                     ForEach (networkManager.txs!, id: \.id) { tx in
                                         TxView(tx: tx)
                                     }

@@ -100,7 +100,6 @@
 		8D1F4B2126000A270023E7AC /* Durocoin */ = {
 			isa = PBXGroup;
 			children = (
-				8DD98FAB262A0A8200A37F9B /* New Group */,
 				8DCE6202262773740043DB07 /* Networking */,
 				8D27283E262137560091C29B /* Models */,
 				8D52479126103AEC007F59C6 /* Settings */,
@@ -188,13 +187,6 @@
 				8DE58DC92622400E00F6F043 /* NetworkManager.swift */,
 			);
 			path = Networking;
-			sourceTree = "<group>";
-		};
-		8DD98FAB262A0A8200A37F9B /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
