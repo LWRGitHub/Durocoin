@@ -8,18 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var isNotLoggedIn: Bool = true
-    
     var body: some View {
         ZStack{
-            //if isNotLogged in
-            // show LoginView
-            //else
-            // hamburgerMenuView
             hamburgerMenuView()
-                .fullScreenCover(isPresented: $isNotLoggedIn) {
-                    LoginView()
-            }
         }
     }
     

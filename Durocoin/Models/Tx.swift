@@ -83,7 +83,9 @@ struct Tx: Decodable {
     let amountInCents: Int
     let createdAt, updatedAt: String
     let sourceID, targetID: String?
+    let externalSourceId, externalTargetId: String?
     let source, target: Source?
+    let externalTarget, externalSource: ExternalSource?
 
 
     enum CodingKeys: String, CodingKey {
@@ -91,6 +93,8 @@ struct Tx: Decodable {
         case sourceID = "sourceId"
         case targetID = "targetId"
         case source, target
+        case externalSourceId, externalTargetId
+        case externalTarget, externalSource
     }
 }
 
@@ -98,4 +102,10 @@ struct Tx: Decodable {
 struct Source: Codable {
     let id: String
     let fullName: String
+}
+
+// MARK: - External Source
+struct ExternalSource: Codable {
+    let id: String
+    let name: String
 }

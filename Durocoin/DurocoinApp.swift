@@ -9,9 +9,15 @@ import SwiftUI
 
 @main
 struct DurocoinApp: App {
+    @AppStorage("token") var token: String?
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if token != nil {
+                ContentView()
+            } else {
+                LoginView()
+            }
         }
     }
 }

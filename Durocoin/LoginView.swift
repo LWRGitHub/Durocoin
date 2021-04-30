@@ -11,8 +11,6 @@ struct LoginView: View {
     @State var email: String = ""
     @State var password: String = ""
     @Environment(\.presentationMode) var presentationMode
-//    @Binding var isNotLoggedIn: Bool
-//    @State var ShowLogout: Bool
 
     var body: some View {
         
@@ -92,10 +90,6 @@ struct LoginView: View {
                 //safely unwrap data
                 let token = String(data: data!, encoding: .utf8)
                 UserDefaults.standard.setValue(token, forKey: "token")
-                DispatchQueue.main.async {
-                    presentationMode.wrappedValue.dismiss()
-                }
-                
             }catch {
                 print(error)
             }
